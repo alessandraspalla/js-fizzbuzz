@@ -15,12 +15,14 @@ for (let i = 1; i <= 100; i++) {
     contenitore.append(element);
 
     // Istruzioni condizionali
-    if (i % 3 === 0) {
+    if (i % 15 === 0) {
 
-        //Modifico l'innerHtml in caso di numero divisibile per 3
-        element.innerHTML = `fizz`;
+        // Modifico l'innerHtml in caso di numero divisibile sia per 3 che per 5
+        element.innerHTML = `FizzBuzz`;
         // Aggiungo classe per la modifica del background
-        element.classList.add("fizz");
+        element.classList.add("fizzbuzz");
+
+        
 
     } else if (i % 5 === 0) {
 
@@ -29,12 +31,13 @@ for (let i = 1; i <= 100; i++) {
         // Aggiungo classe per la modifica del background
         element.classList.add("buzz");
 
-    }   else if ((i % 3 === 0) || (i % 5 === 0)) {
+    }   else if (i % 3 === 0) {
 
-        // Modifico l'innerHtml in caso di numero divisibile sia per 3 che per 5
-        element.innerHTML = `FizzBuzz`;
+        //Modifico l'innerHtml in caso di numero divisibile per 3
+        element.innerHTML = `fizz`;
         // Aggiungo classe per la modifica del background
-        element.classList.add("fizzbuzz");
+        element.classList.add("fizz");
+        
 
     }
 }
